@@ -1,0 +1,3 @@
+C:/Users/Lena/Documents/Bioinformatik/BI_1/Uebung02_Codegeruest/Uebung02/cmake-build-debug/CMakeFiles/Uebung02.dir
+C:/Users/Lena/Documents/Bioinformatik/BI_1/Uebung02_Codegeruest/Uebung02/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Lena/Documents/Bioinformatik/BI_1/Uebung02_Codegeruest/Uebung02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
