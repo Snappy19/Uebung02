@@ -1,7 +1,7 @@
 /*#include <gtest/gtest.h>
 
-#include "DNA.h"
-#include "InvalidCharacter.h"
+#include "../DNA.h"
+#include "../InvalidCharacter.h"
 
 using namespace Alphabet;
 

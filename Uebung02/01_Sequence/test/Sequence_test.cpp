@@ -1,11 +1,11 @@
 /*#include <gtest/gtest.h>
 
-#include "Sequence.h"
-#include "InvalidCharacter.h"
+#include "../Sequence.h"
+#include "../InvalidCharacter.h"
 
-#include "DNA.h"
-#include "RNA.h"
-#include "Peptide.h"
+#include "../DNA.h"
+#include "../RNA.h"
+#include "../Peptide.h"
 
 using namespace Alphabet;
 

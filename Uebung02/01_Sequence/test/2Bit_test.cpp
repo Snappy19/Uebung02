@@ -1,9 +1,9 @@
 /*#include <gtest/gtest.h>
 
-#include "Sequence.h"
-#include "2Bit.h"
-#include "DNA.h"
-#include "ParsingException.h"
+#include "../Sequence.h"
+#include "../2Bit.h"
+#include "../DNA.h"
+#include "../ParsingException.h"
 
 using namespace Alphabet;
 
@@ -100,4 +100,5 @@ TEST(TwoBit_DNA, write)
 		ASSERT_EQ(array[i], ss.get());
 	}
 }
+
 */

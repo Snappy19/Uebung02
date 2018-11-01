@@ -1,8 +1,8 @@
 /*#include <gtest/gtest.h>
 
-#include "Sequence.h"
-#include "Fasta.h"
-#include "DNA.h"
+#include "../Sequence.h"
+#include "../Fasta.h"
+#include "../DNA.h"
 
 using namespace Alphabet;
 

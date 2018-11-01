@@ -1,7 +1,7 @@
 /*#include <gtest/gtest.h>
 
-#include "RNA.h"
-#include "InvalidCharacter.h"
+#include "../RNA.h"
+#include "../InvalidCharacter.h"
 
 using namespace Alphabet;
 
@@ -40,4 +40,5 @@ TEST(RNA, toChar)
 	EXPECT_EQ('G', RNA::toChar(RNA::Characters::G));
 	EXPECT_EQ('C', RNA::toChar(RNA::Characters::C));
 }
+
 */

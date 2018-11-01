@@ -56,7 +56,15 @@ template <typename NodeLabel> class Graph
 	 * Detailed constructor that also creates the nodes 
 	 * od the Graph.
 	 */
-	explicit Graph(const std::vector<NodeLabel>& new_nodes);
+	explicit Graph(const std::vector<NodeLabel>& new_nodes)
+	{
+	    NodeContainer nodes;
+	    for (auto element = new_nodes.begin(); element < new_nodes.end(); ++element)
+        {
+	        Node new_node = new Node(element);
+	        nodes.add(new_node);
+        }
+	}               // iterate over vector, create new Node for every label found and add it to the list/vector of nodes
 
 	/**
 	 * Node iterators.
@@ -104,3 +112,65 @@ template <typename NodeLabel> class Graph
 
 #endif // BIOINFOI_GRAPH_H
 
+template <typename NodeLabel>
+typename Graph<NodeLabel>::node_iterator Graph<NodeLabel>::beginNodes()
+{
+    return nodes_.begin();
+}
+
+template <typename NodeLabel>
+typename Graph<NodeLabel>::node_iterator Graph<NodeLabel>::endNodes()
+{
+    return nodes_.end();
+}
+
+template <typename NodeLabel>
+typename Graph<NodeLabel>::const_node_iterator Graph<NodeLabel>::beginNodes() const
+{
+    return nodes_.begin();
+}
+
+template <typename NodeLabel>
+typename Graph<NodeLabel>::const_node_iterator Graph<NodeLabel>::endNodes() const
+{
+    return nodes_.end();
+}
+template <typename NodeLabel>
+typename Graph<NodeLabel>::Node* Graph<NodeLabel>::addNode(const NodeLabel& label)
+{
+    return nodes_.add(label);       // ???
+}
+
+template <typename NodeLabel>
+typename Graph<NodeLabel>::Edge Graph<NodeLabel>::addEdge(Node* n1, Node* n2, size_t weight)
+{
+    return nodes_.add(new Edge(n1, n2, weight));        // ???
+}
+
+template <typename NodeLabel>
+void Graph<NodeLabel>::removeEdge(const Edge& e)
+{
+    ~e; // nodes_.clear(e); ???
+}
+
+template <typename NodeLabel>
+void Graph<NodeLabel>::removeEdge(Node* n1, const Node* n2)
+{
+    // outgoing edge von n1 nehmen
+    std::vector<std::pair<Node*, size_t>> liste = n1->out_edges; // in liste jetzt alle outgoing edges von n1 ??
+
+}
+
+
+template <typename NodeLabel>
+typename Graph<NodeLabel>::Node* Graph<NodeLabel>::contractEdge(const Edge& rem)
+{
+    // rem entfernen -> neue node erstellen und die beiden anderen nodes löschen -> in neuer node infos der alten speichern
+    // out_edges und sowas
+}
+
+template <typename NodeLabel>
+size_t Graph<NodeLabel>::numNodes() const
+{
+    return nodes_.size();
+}
